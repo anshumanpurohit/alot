@@ -1,0 +1,30 @@
+version: '2'
+services:
+    alot-cassandra:
+        container_name: alot-cassandra
+        image: cassandra:2.2.5
+        # volumes:
+        #     - ~/volumes/jhipster/alot/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    alot-cassandra-node:
+        image: cassandra:2.2.5
+        links:
+            - alot-cassandra:seed
+        environment:
+            - CASSANDRA_SEEDS=seed
+    alot-cassandra-migration:
+        container_name: alot-cassandra-migration
+        links:
+            - alot-cassandra
+        environment:
+            - CASSANDRA_CONTACT_POINT=alot-cassandra
+        build:
+            context: .
+            dockerfile: cassandra/Cassandra.Dockerfile
+        volumes:
+            - ../resources/config/cql:/cql:ro

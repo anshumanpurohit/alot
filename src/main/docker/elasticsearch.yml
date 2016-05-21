@@ -1,0 +1,10 @@
+version: '2'
+services:
+    alot-elasticsearch:
+        container_name: alot-elasticsearch
+        image: elasticsearch:1.7.5
+        # volumes:
+        #     - ~/volumes/jhipster/alot/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
