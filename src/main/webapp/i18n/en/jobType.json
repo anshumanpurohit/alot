@@ -1,0 +1,13 @@
+{
+    "alotApp": {
+        "JobType" : {
+            "null": "",
+            "QUOTE": "QUOTE",
+            "APPLICATION": "APPLICATION",
+            "POLICYCHANGE": "POLICYCHANGE",
+            "CANCELLATION": "CANCELLATION",
+            "REWRITE": "REWRITE",
+            "REINSTATEMENT": "REINSTATEMENT"
+        }
+    }
+}

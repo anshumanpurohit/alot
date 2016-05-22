@@ -1,0 +1,38 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "coverageTermDef",
+      "otherEntityName": "coverageTermDef",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "beginEffectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "endEffectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "state",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235211",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "coverage_term_option_def"
+}

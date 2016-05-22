@@ -1,0 +1,65 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "productLineDef",
+      "otherEntityName": "productLineDef",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "productLine"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "discounts",
+      "otherEntityName": "discount",
+      "otherEntityRelationshipName": "productLine"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "drivers",
+      "otherEntityName": "policyDriver",
+      "otherEntityRelationshipName": "productLine"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipType": "one-to-many",
+      "relationshipName": "insureds",
+      "otherEntityName": "namedInsured",
+      "otherEntityRelationshipName": "productLine"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipType": "one-to-many",
+      "relationshipName": "vehicles",
+      "otherEntityName": "personalAutoVehicle",
+      "otherEntityRelationshipName": "productLine"
+    },
+    {
+      "relationshipId": 6,
+      "relationshipType": "one-to-many",
+      "relationshipName": "coverages",
+      "otherEntityName": "coverage",
+      "otherEntityRelationshipName": "productLine"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "startEffectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "endEffectiveDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20160521235221",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "product_line"
+}

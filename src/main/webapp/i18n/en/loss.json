@@ -1,0 +1,27 @@
+{
+    "alotApp": {
+        "loss" : {
+            "home": {
+                "title": "Losses",
+                "createLabel": "Create a new Loss",
+                "createOrEditLabel": "Create or edit a Loss",
+                "search": "Search for Loss"
+            },
+            "created": "A new Loss is created with identifier {{ param }}",
+            "updated": "A Loss is updated with identifier {{ param }}",
+            "deleted": "A Loss is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Loss {{ id }}?"
+            },
+            "detail": {
+                "title": "Loss"
+            },
+            "fixedId": "Fixed Id",
+            "externalRefId": "External Ref Id",
+            "description": "Description",
+            "lossOccurredDate": "Loss Occurred Date",
+            "claimAmount": "Claim Amount",
+            "personalAutoVehicle": "Personal Auto Vehicle"
+        }
+    }
+}

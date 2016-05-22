@@ -1,0 +1,40 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "addressBooks",
+      "otherEntityName": "addressBook",
+      "otherEntityRelationshipName": "producer"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "activities",
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "producer"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "externalReferenceId",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235232",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "producer"
+}

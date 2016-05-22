@@ -1,0 +1,9 @@
+{
+    "alotApp": {
+        "CommunicationPreference" : {
+            "null": "",
+            "PHONE": "PHONE",
+            "EMAIL": "EMAIL"
+        }
+    }
+}

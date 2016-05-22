@@ -1,0 +1,32 @@
+{
+    "alotApp": {
+        "personalAutoVehicle" : {
+            "home": {
+                "title": "Personal Auto Vehicles",
+                "createLabel": "Create a new Personal Auto Vehicle",
+                "createOrEditLabel": "Create or edit a Personal Auto Vehicle",
+                "search": "Search for Personal Auto Vehicle"
+            },
+            "created": "A new Personal Auto Vehicle is created with identifier {{ param }}",
+            "updated": "A Personal Auto Vehicle is updated with identifier {{ param }}",
+            "deleted": "A Personal Auto Vehicle is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Personal Auto Vehicle {{ id }}?"
+            },
+            "detail": {
+                "title": "Personal Auto Vehicle"
+            },
+            "fixedId": "Fixed Id",
+            "year": "Year",
+            "make": "Make",
+            "model": "Model",
+            "bodyStyle": "Body Style",
+            "symbols": "Symbols",
+            "policyDriver": "Policy Driver",
+            "productLine": "Product Line",
+            "garageLocation": "Garage Location",
+            "losses": "Losses",
+            "coverages": "Coverages"
+        }
+    }
+}

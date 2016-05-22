@@ -1,0 +1,45 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "coverageDef",
+      "otherEntityName": "coverageDef",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "covTermOptionDef",
+      "otherEntityName": "coverageTermOptionDef",
+      "otherEntityRelationshipName": "coverageTermDef"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "beginEffectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "endEffectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "state",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235210",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "coverage_term_def"
+}

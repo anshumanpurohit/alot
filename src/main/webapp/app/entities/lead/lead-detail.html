@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="alotApp.lead.detail.title">Lead</span> {{vm.lead.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.lead.requestedTime">Requested Time</span></dt>
+        <dd>
+            <span>{{vm.lead.requestedTime | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.lead.responseTime">Response Time</span></dt>
+        <dd>
+            <span>{{vm.lead.responseTime | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.lead.premimumAmount">Premimum Amount</span></dt>
+        <dd>
+            <span>{{vm.lead.premimumAmount}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.lead.job">Job</span></dt>
+        <dd>
+            <a ui-sref="job-detail({id:vm.lead.job.id})">{{vm.lead.job.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.lead.carrier">Carrier</span></dt>
+        <dd>
+            <a ui-sref="carrier-detail({id:vm.lead.carrier.id})">{{vm.lead.carrier.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

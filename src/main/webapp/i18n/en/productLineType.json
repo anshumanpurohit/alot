@@ -1,0 +1,11 @@
+{
+    "alotApp": {
+        "ProductLineType" : {
+            "null": "",
+            "HOME": "HOME",
+            "PERSONALAUTO": "PERSONALAUTO",
+            "COMMERCIALAUTO": "COMMERCIALAUTO",
+            "LIFE": "LIFE"
+        }
+    }
+}

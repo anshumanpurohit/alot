@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="alotApp.coverage.detail.title">Coverage</span> {{vm.coverage.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.coverage.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.coverage.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverage.productLine">Product Line</span></dt>
+        <dd>
+            <a ui-sref="product-line-detail({id:vm.coverage.productLine.id})">{{vm.coverage.productLine.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverage.definition">Definition</span></dt>
+        <dd>
+            <a ui-sref="coverage-def-detail({id:vm.coverage.definition.id})">{{vm.coverage.definition.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverage.personalAutoVehicle">Personal Auto Vehicle</span></dt>
+        <dd>
+            <a ui-sref="personal-auto-vehicle-detail({id:vm.coverage.personalAutoVehicle.id})">{{vm.coverage.personalAutoVehicle.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

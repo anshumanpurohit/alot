@@ -1,0 +1,42 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "job",
+      "otherEntityName": "job",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-one",
+      "relationshipName": "carrier",
+      "otherEntityName": "carrier",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "lead"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "requestedTime",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "responseTime",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "premimumAmount",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "changelogDate": "20160521235214",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "lead"
+}

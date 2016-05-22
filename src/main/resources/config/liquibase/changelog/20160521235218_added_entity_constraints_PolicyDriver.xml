@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PolicyDriver.
+    -->
+    <changeSet id="20160521235218-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="violations_id"
+                                 baseTableName="policy_driver"
+                                 constraintName="fk_policydriver_violations_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="violation"/>
+
+        <addForeignKeyConstraint baseColumnNames="policy_contact_id"
+                                 baseTableName="policy_driver"
+                                 constraintName="fk_policydriver_policycontact_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="policy_contact"/>
+
+        <addForeignKeyConstraint baseColumnNames="product_line_id"
+                                 baseTableName="policy_driver"
+                                 constraintName="fk_policydriver_productline_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product_line"/>
+
+    </changeSet>
+</databaseChangeLog>

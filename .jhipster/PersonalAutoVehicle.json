@@ -1,0 +1,78 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "policyDriver",
+      "otherEntityName": "policyDriver",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "productLine",
+      "otherEntityName": "productLine",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-one",
+      "relationshipName": "garageLocation",
+      "otherEntityName": "address",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "personalAutoVehicle"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipType": "one-to-many",
+      "relationshipName": "losses",
+      "otherEntityName": "loss",
+      "otherEntityRelationshipName": "personalAutoVehicle"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipType": "one-to-many",
+      "relationshipName": "coverages",
+      "otherEntityName": "coverage",
+      "otherEntityRelationshipName": "personalAutoVehicle"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "make",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "bodyStyle",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "symbols",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235226",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "personal_auto_vehicle"
+}

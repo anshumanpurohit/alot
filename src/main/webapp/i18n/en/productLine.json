@@ -1,0 +1,29 @@
+{
+    "alotApp": {
+        "productLine" : {
+            "home": {
+                "title": "Product Lines",
+                "createLabel": "Create a new Product Line",
+                "createOrEditLabel": "Create or edit a Product Line",
+                "search": "Search for Product Line"
+            },
+            "created": "A new Product Line is created with identifier {{ param }}",
+            "updated": "A Product Line is updated with identifier {{ param }}",
+            "deleted": "A Product Line is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Line {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Line"
+            },
+            "startEffectiveDate": "Start Effective Date",
+            "endEffectiveDate": "End Effective Date",
+            "productLineDef": "Product Line Def",
+            "discounts": "Discounts",
+            "drivers": "Drivers",
+            "insureds": "Insureds",
+            "vehicles": "Vehicles",
+            "coverages": "Coverages"
+        }
+    }
+}

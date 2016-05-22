@@ -1,0 +1,30 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "externalViolationCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "violationOccurredDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "additionalDetails",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235219",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "violation"
+}

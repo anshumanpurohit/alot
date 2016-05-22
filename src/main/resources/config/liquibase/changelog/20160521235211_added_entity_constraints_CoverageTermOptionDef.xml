@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity CoverageTermOptionDef.
+    -->
+    <changeSet id="20160521235211-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="coverage_term_def_id"
+                                 baseTableName="coverage_term_option_def"
+                                 constraintName="fk_coveragetermoptiondef_coveragetermdef_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="coverage_term_def"/>
+
+    </changeSet>
+</databaseChangeLog>

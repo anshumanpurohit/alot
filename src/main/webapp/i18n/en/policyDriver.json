@@ -1,0 +1,26 @@
+{
+    "alotApp": {
+        "policyDriver" : {
+            "home": {
+                "title": "Policy Drivers",
+                "createLabel": "Create a new Policy Driver",
+                "createOrEditLabel": "Create or edit a Policy Driver",
+                "search": "Search for Policy Driver"
+            },
+            "created": "A new Policy Driver is created with identifier {{ param }}",
+            "updated": "A Policy Driver is updated with identifier {{ param }}",
+            "deleted": "A Policy Driver is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Policy Driver {{ id }}?"
+            },
+            "detail": {
+                "title": "Policy Driver"
+            },
+            "fixedId": "Fixed Id",
+            "violations": "Violations",
+            "policyContact": "Policy Contact",
+            "vehicles": "Vehicles",
+            "productLine": "Product Line"
+        }
+    }
+}

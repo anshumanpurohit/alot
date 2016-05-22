@@ -1,0 +1,25 @@
+{
+    "alotApp": {
+        "discountDef" : {
+            "home": {
+                "title": "Discount Defs",
+                "createLabel": "Create a new Discount Def",
+                "createOrEditLabel": "Create or edit a Discount Def",
+                "search": "Search for Discount Def"
+            },
+            "created": "A new Discount Def is created with identifier {{ param }}",
+            "updated": "A Discount Def is updated with identifier {{ param }}",
+            "deleted": "A Discount Def is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Discount Def {{ id }}?"
+            },
+            "detail": {
+                "title": "Discount Def"
+            },
+            "description": "Description",
+            "beginEffectiveDate": "Begin Effective Date",
+            "endEffectiveDate": "End Effective Date",
+            "state": "State"
+        }
+    }
+}

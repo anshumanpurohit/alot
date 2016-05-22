@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="alotApp.coverageTermDef.detail.title">Coverage Term Def</span> {{vm.coverageTermDef.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.coverageTermDef.description">Description</span></dt>
+        <dd>
+            <span>{{vm.coverageTermDef.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermDef.beginEffectiveDate">Begin Effective Date</span></dt>
+        <dd>
+            <span>{{vm.coverageTermDef.beginEffectiveDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermDef.endEffectiveDate">End Effective Date</span></dt>
+        <dd>
+            <span>{{vm.coverageTermDef.endEffectiveDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermDef.state">State</span></dt>
+        <dd>
+            <span>{{vm.coverageTermDef.state}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermDef.coverageDef">Coverage Def</span></dt>
+        <dd>
+            <a ui-sref="coverage-def-detail({id:vm.coverageTermDef.coverageDef.id})">{{vm.coverageTermDef.coverageDef.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

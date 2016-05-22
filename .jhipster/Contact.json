@@ -1,0 +1,90 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "address",
+      "otherEntityName": "address",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "contact"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-one",
+      "relationshipName": "addressBook",
+      "otherEntityName": "addressBook",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "contact"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "middleInitial",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "dob",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "workPhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "homePhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "emailAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "communicationPreference",
+      "fieldType": "CommunicationPreference",
+      "fieldValues": "PHONE,EMAIL"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "externalReferenceId",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235233",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "contact"
+}

@@ -1,0 +1,58 @@
+
+<div>
+    <h2><span translate="alotApp.personalAutoVehicle.detail.title">Personal Auto Vehicle</span> {{vm.personalAutoVehicle.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.personalAutoVehicle.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.year">Year</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.year}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.make">Make</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.make}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.model">Model</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.model}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.bodyStyle">Body Style</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.bodyStyle}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.symbols">Symbols</span></dt>
+        <dd>
+            <span>{{vm.personalAutoVehicle.symbols}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.policyDriver">Policy Driver</span></dt>
+        <dd>
+            <a ui-sref="policy-driver-detail({id:vm.personalAutoVehicle.policyDriver.id})">{{vm.personalAutoVehicle.policyDriver.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.productLine">Product Line</span></dt>
+        <dd>
+            <a ui-sref="product-line-detail({id:vm.personalAutoVehicle.productLine.id})">{{vm.personalAutoVehicle.productLine.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.personalAutoVehicle.garageLocation">Garage Location</span></dt>
+        <dd>
+            <a ui-sref="address-detail({id:vm.personalAutoVehicle.garageLocation.id})">{{vm.personalAutoVehicle.garageLocation.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

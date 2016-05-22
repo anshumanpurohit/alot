@@ -1,0 +1,42 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "activityPattern",
+      "otherEntityName": "activityPattern",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "activity"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "producer",
+      "otherEntityName": "producer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235231",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "activity"
+}

@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLossLabel" translate="alotApp.loss.home.createOrEditLabel">Create or edit a Loss</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.loss.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.loss.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.loss.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.loss.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.loss.externalRefId" for="field_externalRefId">External Ref Id</label>
+            <input type="text" class="form-control" name="externalRefId" id="field_externalRefId"
+                    ng-model="vm.loss.externalRefId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.loss.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.loss.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.loss.lossOccurredDate" for="field_lossOccurredDate">Loss Occurred Date</label>
+                <div class="input-group">
+                    <input id="field_lossOccurredDate" type="text" class="form-control" name="lossOccurredDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.loss.lossOccurredDate" is-open="vm.datePickerOpenStatus.lossOccurredDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lossOccurredDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.loss.claimAmount" for="field_claimAmount">Claim Amount</label>
+            <input type="number" class="form-control" name="claimAmount" id="field_claimAmount"
+                    ng-model="vm.loss.claimAmount"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="alotApp.loss.personalAutoVehicle" for="field_personalAutoVehicle">Personal Auto Vehicle</label>
+            <select class="form-control" id="field_personalAutoVehicle" name="personalAutoVehicle" ng-model="vm.loss.personalAutoVehicle" ng-options="personalAutoVehicle as personalAutoVehicle.id for personalAutoVehicle in vm.personalautovehicles track by personalAutoVehicle.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

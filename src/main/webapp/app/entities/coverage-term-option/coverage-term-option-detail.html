@@ -1,0 +1,28 @@
+
+<div>
+    <h2><span translate="alotApp.coverageTermOption.detail.title">Coverage Term Option</span> {{vm.coverageTermOption.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.coverageTermOption.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.coverageTermOption.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermOption.coverageTerm">Coverage Term</span></dt>
+        <dd>
+            <a ui-sref="coverage-term-detail({id:vm.coverageTermOption.coverageTerm.id})">{{vm.coverageTermOption.coverageTerm.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.coverageTermOption.definition">Definition</span></dt>
+        <dd>
+            <a ui-sref="coverage-term-option-def-detail({id:vm.coverageTermOption.definition.id})">{{vm.coverageTermOption.definition.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

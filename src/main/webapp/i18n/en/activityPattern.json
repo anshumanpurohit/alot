@@ -1,0 +1,26 @@
+{
+    "alotApp": {
+        "activityPattern" : {
+            "home": {
+                "title": "Activity Patterns",
+                "createLabel": "Create a new Activity Pattern",
+                "createOrEditLabel": "Create or edit a Activity Pattern",
+                "search": "Search for Activity Pattern"
+            },
+            "created": "A new Activity Pattern is created with identifier {{ param }}",
+            "updated": "A Activity Pattern is updated with identifier {{ param }}",
+            "deleted": "A Activity Pattern is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Activity Pattern {{ id }}?"
+            },
+            "detail": {
+                "title": "Activity Pattern"
+            },
+            "fixedId": "Fixed Id",
+            "deleted": "Deleted",
+            "description": "Description",
+            "escalationDays": "Escalation Days",
+            "createActivityFor": "Create Activity For"
+        }
+    }
+}

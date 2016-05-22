@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PersonalAutoVehicle.
+    -->
+    <changeSet id="20160521235226-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="policy_driver_id"
+                                 baseTableName="personal_auto_vehicle"
+                                 constraintName="fk_personalautovehicle_policydriver_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="policy_driver"/>
+
+        <addForeignKeyConstraint baseColumnNames="product_line_id"
+                                 baseTableName="personal_auto_vehicle"
+                                 constraintName="fk_personalautovehicle_productline_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product_line"/>
+
+        <addForeignKeyConstraint baseColumnNames="garage_location_id"
+                                 baseTableName="personal_auto_vehicle"
+                                 constraintName="fk_personalautovehicle_garagelocation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="alotApp.activityPattern.detail.title">Activity Pattern</span> {{vm.activityPattern.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.activityPattern.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.activityPattern.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.activityPattern.deleted">Deleted</span></dt>
+        <dd>
+            <span>{{vm.activityPattern.deleted}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.activityPattern.description">Description</span></dt>
+        <dd>
+            <span>{{vm.activityPattern.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.activityPattern.escalationDays">Escalation Days</span></dt>
+        <dd>
+            <span>{{vm.activityPattern.escalationDays}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.activityPattern.createActivityFor">Create Activity For</span></dt>
+        <dd>
+            <span>{{vm.activityPattern.createActivityFor}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

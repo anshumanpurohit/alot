@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="alotApp.violation.detail.title">Violation</span> {{vm.violation.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.violation.externalViolationCode">External Violation Code</span></dt>
+        <dd>
+            <span>{{vm.violation.externalViolationCode}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.violation.description">Description</span></dt>
+        <dd>
+            <span>{{vm.violation.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.violation.violationOccurredDate">Violation Occurred Date</span></dt>
+        <dd>
+            <span>{{vm.violation.violationOccurredDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.violation.additionalDetails">Additional Details</span></dt>
+        <dd>
+            <span>{{vm.violation.additionalDetails}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

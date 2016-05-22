@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity NamedInsured.
+    -->
+    <changeSet id="20160521235217-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="policy_contact_id"
+                                 baseTableName="named_insured"
+                                 constraintName="fk_namedinsured_policycontact_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="policy_contact"/>
+
+        <addForeignKeyConstraint baseColumnNames="product_line_id"
+                                 baseTableName="named_insured"
+                                 constraintName="fk_namedinsured_productline_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product_line"/>
+
+    </changeSet>
+</databaseChangeLog>

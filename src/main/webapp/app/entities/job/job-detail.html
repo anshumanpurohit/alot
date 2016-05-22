@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="alotApp.job.detail.title">Job</span> {{vm.job.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.job.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.job.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.job.deleted">Deleted</span></dt>
+        <dd>
+            <span>{{vm.job.deleted}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.job.jobType">Job Type</span></dt>
+        <dd>
+            <span translate="{{'alotApp.JobType.' + vm.job.jobType}}">{{vm.job.jobType}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.job.policy">Policy</span></dt>
+        <dd>
+            <a ui-sref="policy-detail({id:vm.job.policy.id})">{{vm.job.policy.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

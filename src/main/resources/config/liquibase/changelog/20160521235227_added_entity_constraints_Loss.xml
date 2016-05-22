@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Loss.
+    -->
+    <changeSet id="20160521235227-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="personal_auto_vehicle_id"
+                                 baseTableName="loss"
+                                 constraintName="fk_loss_personalautovehicle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personal_auto_vehicle"/>
+
+    </changeSet>
+</databaseChangeLog>

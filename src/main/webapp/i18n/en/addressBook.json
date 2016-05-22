@@ -1,0 +1,25 @@
+{
+    "alotApp": {
+        "addressBook" : {
+            "home": {
+                "title": "Address Books",
+                "createLabel": "Create a new Address Book",
+                "createOrEditLabel": "Create or edit a Address Book",
+                "search": "Search for Address Book"
+            },
+            "created": "A new Address Book is created with identifier {{ param }}",
+            "updated": "A Address Book is updated with identifier {{ param }}",
+            "deleted": "A Address Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Address Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Address Book"
+            },
+            "fixedId": "Fixed Id",
+            "deleted": "Deleted",
+            "description": "Description",
+            "producer": "Producer"
+        }
+    }
+}

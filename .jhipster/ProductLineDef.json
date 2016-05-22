@@ -1,0 +1,16 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "productLineType",
+      "fieldType": "ProductLineType",
+      "fieldValues": "HOME,PERSONALAUTO,COMMERCIALAUTO,LIFE"
+    }
+  ],
+  "changelogDate": "20160521235208",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "product_line_def"
+}

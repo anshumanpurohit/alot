@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="alotApp.addressBook.detail.title">Address Book</span> {{vm.addressBook.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.addressBook.fixedId">Fixed Id</span></dt>
+        <dd>
+            <span>{{vm.addressBook.fixedId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.addressBook.deleted">Deleted</span></dt>
+        <dd>
+            <span>{{vm.addressBook.deleted}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.addressBook.description">Description</span></dt>
+        <dd>
+            <span>{{vm.addressBook.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.addressBook.producer">Producer</span></dt>
+        <dd>
+            <a ui-sref="producer-detail({id:vm.addressBook.producer.id})">{{vm.addressBook.producer.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

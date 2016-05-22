@@ -1,0 +1,28 @@
+
+<div>
+    <h2><span translate="alotApp.discount.detail.title">Discount</span> {{vm.discount.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.discount.amount">Amount</span></dt>
+        <dd>
+            <span>{{vm.discount.amount}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.discount.productLine">Product Line</span></dt>
+        <dd>
+            <a ui-sref="product-line-detail({id:vm.discount.productLine.id})">{{vm.discount.productLine.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.discount.definition">Definition</span></dt>
+        <dd>
+            <a ui-sref="discount-def-detail({id:vm.discount.definition.id})">{{vm.discount.definition.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,115 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myContactLabel" translate="alotApp.contact.home.createOrEditLabel">Create or edit a Contact</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.contact.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.contact.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.contact.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.deleted" for="field_deleted">Deleted</label>
+            <input type="checkbox" class="form-control" name="deleted" id="field_deleted"
+                    ng-model="vm.contact.deleted"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.firstName" for="field_firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="vm.contact.firstName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.lastName" for="field_lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="vm.contact.lastName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.middleInitial" for="field_middleInitial">Middle Initial</label>
+            <input type="text" class="form-control" name="middleInitial" id="field_middleInitial"
+                    ng-model="vm.contact.middleInitial"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.dob" for="field_dob">Dob</label>
+                <div class="input-group">
+                    <input id="field_dob" type="text" class="form-control" name="dob" uib-datepicker-popup="{{dateformat}}" ng-model="vm.contact.dob" is-open="vm.datePickerOpenStatus.dob"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.workPhone" for="field_workPhone">Work Phone</label>
+            <input type="text" class="form-control" name="workPhone" id="field_workPhone"
+                    ng-model="vm.contact.workPhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.homePhone" for="field_homePhone">Home Phone</label>
+            <input type="text" class="form-control" name="homePhone" id="field_homePhone"
+                    ng-model="vm.contact.homePhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.emailAddress" for="field_emailAddress">Email Address</label>
+            <input type="text" class="form-control" name="emailAddress" id="field_emailAddress"
+                    ng-model="vm.contact.emailAddress"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.communicationPreference" for="field_communicationPreference">Communication Preference</label>
+            <select class="form-control" name="communicationPreference" ng-model="vm.contact.communicationPreference" id="field_communicationPreference">
+                <option value="PHONE" translate="alotApp.CommunicationPreference.PHONE">PHONE</option>
+                <option value="EMAIL" translate="alotApp.CommunicationPreference.EMAIL">EMAIL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.companyName" for="field_companyName">Company Name</label>
+            <input type="text" class="form-control" name="companyName" id="field_companyName"
+                    ng-model="vm.contact.companyName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.contact.externalReferenceId" for="field_externalReferenceId">External Reference Id</label>
+            <input type="text" class="form-control" name="externalReferenceId" id="field_externalReferenceId"
+                    ng-model="vm.contact.externalReferenceId"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="alotApp.contact.address" for="field_address">Address</label>
+            <select class="form-control" id="field_address" name="address" ng-model="vm.contact.address" ng-options="address as address.id for address in vm.addresses | orderBy:'id' track by address.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="alotApp.contact.addressBook" for="field_addressBook">Address Book</label>
+            <select class="form-control" id="field_addressBook" name="addressBook" ng-model="vm.contact.addressBook" ng-options="addressBook as addressBook.id for addressBook in vm.addressbooks | orderBy:'id' track by addressBook.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

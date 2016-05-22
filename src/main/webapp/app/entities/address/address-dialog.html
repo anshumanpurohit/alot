@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAddressLabel" translate="alotApp.address.home.createOrEditLabel">Create or edit a Address</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.address.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.address.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.address.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.deleted" for="field_deleted">Deleted</label>
+            <input type="checkbox" class="form-control" name="deleted" id="field_deleted"
+                    ng-model="vm.address.deleted"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.addressLine1" for="field_addressLine1">Address Line 1</label>
+            <input type="text" class="form-control" name="addressLine1" id="field_addressLine1"
+                    ng-model="vm.address.addressLine1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.addressLine2" for="field_addressLine2">Address Line 2</label>
+            <input type="text" class="form-control" name="addressLine2" id="field_addressLine2"
+                    ng-model="vm.address.addressLine2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.address.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.zipCode" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.address.zipCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.zip4Code" for="field_zip4Code">Zip 4 Code</label>
+            <input type="text" class="form-control" name="zip4Code" id="field_zip4Code"
+                    ng-model="vm.address.zip4Code"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.standardized" for="field_standardized">Standardized</label>
+            <input type="checkbox" class="form-control" name="standardized" id="field_standardized"
+                    ng-model="vm.address.standardized"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.latitude" for="field_latitude">Latitude</label>
+            <input type="text" class="form-control" name="latitude" id="field_latitude"
+                    ng-model="vm.address.latitude"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.address.longitude" for="field_longitude">Longitude</label>
+            <input type="text" class="form-control" name="longitude" id="field_longitude"
+                    ng-model="vm.address.longitude"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

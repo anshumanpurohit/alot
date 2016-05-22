@@ -1,0 +1,48 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "violations",
+      "otherEntityName": "violation",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "policyDriver"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-one",
+      "relationshipName": "policyContact",
+      "otherEntityName": "policyContact",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "policyDriver"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "vehicles",
+      "otherEntityName": "personalAutoVehicle",
+      "otherEntityRelationshipName": "policyDriver"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "productLine",
+      "otherEntityName": "productLine",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235218",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "policy_driver"
+}

@@ -1,0 +1,37 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "productLine",
+      "otherEntityName": "productLine",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "policy"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "jobs",
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "policy"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "policyNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "baseState",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235220",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "policy"
+}

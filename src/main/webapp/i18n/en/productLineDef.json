@@ -1,0 +1,22 @@
+{
+    "alotApp": {
+        "productLineDef" : {
+            "home": {
+                "title": "Product Line Defs",
+                "createLabel": "Create a new Product Line Def",
+                "createOrEditLabel": "Create or edit a Product Line Def",
+                "search": "Search for Product Line Def"
+            },
+            "created": "A new Product Line Def is created with identifier {{ param }}",
+            "updated": "A Product Line Def is updated with identifier {{ param }}",
+            "deleted": "A Product Line Def is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Line Def {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Line Def"
+            },
+            "productLineType": "Product Line Type"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<div>
+    <h2 translate="alotApp.address.home.title">Addresses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="address.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="alotApp.address.home.createLabel">
+                        Create new Address
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'alotApp.address.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="alotApp.address.fixedId">Fixed Id</span></th>
+                    <th><span translate="alotApp.address.deleted">Deleted</span></th>
+                    <th><span translate="alotApp.address.addressLine1">Address Line 1</span></th>
+                    <th><span translate="alotApp.address.addressLine2">Address Line 2</span></th>
+                    <th><span translate="alotApp.address.city">City</span></th>
+                    <th><span translate="alotApp.address.zipCode">Zip Code</span></th>
+                    <th><span translate="alotApp.address.zip4Code">Zip 4 Code</span></th>
+                    <th><span translate="alotApp.address.standardized">Standardized</span></th>
+                    <th><span translate="alotApp.address.latitude">Latitude</span></th>
+                    <th><span translate="alotApp.address.longitude">Longitude</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="address in vm.addresses track by address.id">
+                    <td><a ui-sref="address-detail({id:address.id})">{{address.id}}</a></td>
+                    <td>{{address.fixedId}}</td>
+                    <td>{{address.deleted}}</td>
+                    <td>{{address.addressLine1}}</td>
+                    <td>{{address.addressLine2}}</td>
+                    <td>{{address.city}}</td>
+                    <td>{{address.zipCode}}</td>
+                    <td>{{address.zip4Code}}</td>
+                    <td>{{address.standardized}}</td>
+                    <td>{{address.latitude}}</td>
+                    <td>{{address.longitude}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="address-detail({id:address.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="address.edit({id:address.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="address.delete({id:address.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

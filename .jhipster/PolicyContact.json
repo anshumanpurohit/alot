@@ -1,0 +1,76 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "contactReferenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "middleInitial",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "dob",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "workPhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "homePhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "emailAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "communicationPreference",
+      "fieldType": "CommunicationPreference",
+      "fieldValues": "PHONE,EMAIL"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 13,
+      "fieldName": "externalReferenceId",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235216",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "policy_contact"
+}

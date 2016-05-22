@@ -1,0 +1,34 @@
+{
+    "alotApp": {
+        "policyContact" : {
+            "home": {
+                "title": "Policy Contacts",
+                "createLabel": "Create a new Policy Contact",
+                "createOrEditLabel": "Create or edit a Policy Contact",
+                "search": "Search for Policy Contact"
+            },
+            "created": "A new Policy Contact is created with identifier {{ param }}",
+            "updated": "A Policy Contact is updated with identifier {{ param }}",
+            "deleted": "A Policy Contact is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Policy Contact {{ id }}?"
+            },
+            "detail": {
+                "title": "Policy Contact"
+            },
+            "fixedId": "Fixed Id",
+            "contactReferenceId": "Contact Reference Id",
+            "deleted": "Deleted",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "middleInitial": "Middle Initial",
+            "dob": "Dob",
+            "workPhone": "Work Phone",
+            "homePhone": "Home Phone",
+            "emailAddress": "Email Address",
+            "communicationPreference": "Communication Preference",
+            "companyName": "Company Name",
+            "externalReferenceId": "External Reference Id"
+        }
+    }
+}

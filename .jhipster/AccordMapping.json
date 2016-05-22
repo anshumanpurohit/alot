@@ -1,0 +1,26 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "input",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "output",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "accrodVersion",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235207",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "javadoc": "external mapping begin",
+  "entityTableName": "accord_mapping"
+}

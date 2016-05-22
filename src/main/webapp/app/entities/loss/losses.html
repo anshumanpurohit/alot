@@ -1,0 +1,85 @@
+<div>
+    <h2 translate="alotApp.loss.home.title">Losses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="loss.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="alotApp.loss.home.createLabel">
+                        Create new Loss
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'alotApp.loss.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="alotApp.loss.fixedId">Fixed Id</span></th>
+                    <th><span translate="alotApp.loss.externalRefId">External Ref Id</span></th>
+                    <th><span translate="alotApp.loss.description">Description</span></th>
+                    <th><span translate="alotApp.loss.lossOccurredDate">Loss Occurred Date</span></th>
+                    <th><span translate="alotApp.loss.claimAmount">Claim Amount</span></th>
+                    <th><span translate="alotApp.loss.personalAutoVehicle">Personal Auto Vehicle</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="loss in vm.losses track by loss.id">
+                    <td><a ui-sref="loss-detail({id:loss.id})">{{loss.id}}</a></td>
+                    <td>{{loss.fixedId}}</td>
+                    <td>{{loss.externalRefId}}</td>
+                    <td>{{loss.description}}</td>
+                        <td>{{loss.lossOccurredDate | date:'mediumDate'}}</td>
+                    <td>{{loss.claimAmount}}</td>
+                    <td>
+                        <a ui-sref="personal-auto-vehicle-detail({id:loss.personalAutoVehicle.id})">{{loss.personalAutoVehicle.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="loss-detail({id:loss.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="loss.edit({id:loss.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="loss.delete({id:loss.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myActivityPatternLabel" translate="alotApp.activityPattern.home.createOrEditLabel">Create or edit a Activity Pattern</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.activityPattern.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.activityPattern.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.activityPattern.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.activityPattern.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.activityPattern.deleted" for="field_deleted">Deleted</label>
+            <input type="checkbox" class="form-control" name="deleted" id="field_deleted"
+                    ng-model="vm.activityPattern.deleted"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.activityPattern.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.activityPattern.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.activityPattern.escalationDays" for="field_escalationDays">Escalation Days</label>
+            <input type="number" class="form-control" name="escalationDays" id="field_escalationDays"
+                    ng-model="vm.activityPattern.escalationDays"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.activityPattern.createActivityFor" for="field_createActivityFor">Create Activity For</label>
+            <input type="text" class="form-control" name="createActivityFor" id="field_createActivityFor"
+                    ng-model="vm.activityPattern.createActivityFor"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

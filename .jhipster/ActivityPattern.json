@@ -1,0 +1,35 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "escalationDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "createActivityFor",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160521235230",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "activity_pattern"
+}

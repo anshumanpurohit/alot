@@ -1,0 +1,25 @@
+{
+    "alotApp": {
+        "coverageTerm" : {
+            "home": {
+                "title": "Coverage Terms",
+                "createLabel": "Create a new Coverage Term",
+                "createOrEditLabel": "Create or edit a Coverage Term",
+                "search": "Search for Coverage Term"
+            },
+            "created": "A new Coverage Term is created with identifier {{ param }}",
+            "updated": "A Coverage Term is updated with identifier {{ param }}",
+            "deleted": "A Coverage Term is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Coverage Term {{ id }}?"
+            },
+            "detail": {
+                "title": "Coverage Term"
+            },
+            "fixedId": "Fixed Id",
+            "coverage": "Coverage",
+            "definition": "Definition",
+            "termOptions": "Term Options"
+        }
+    }
+}

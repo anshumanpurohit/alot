@@ -1,0 +1,24 @@
+{
+    "alotApp": {
+        "accordMapping" : {
+            "home": {
+                "title": "Accord Mappings",
+                "createLabel": "Create a new Accord Mapping",
+                "createOrEditLabel": "Create or edit a Accord Mapping",
+                "search": "Search for Accord Mapping"
+            },
+            "created": "A new Accord Mapping is created with identifier {{ param }}",
+            "updated": "A Accord Mapping is updated with identifier {{ param }}",
+            "deleted": "A Accord Mapping is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Accord Mapping {{ id }}?"
+            },
+            "detail": {
+                "title": "Accord Mapping"
+            },
+            "input": "Input",
+            "output": "Output",
+            "accrodVersion": "Accrod Version"
+        }
+    }
+}

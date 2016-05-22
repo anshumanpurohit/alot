@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPersonalAutoVehicleLabel" translate="alotApp.personalAutoVehicle.home.createOrEditLabel">Create or edit a Personal Auto Vehicle</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.personalAutoVehicle.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.personalAutoVehicle.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.personalAutoVehicle.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.year" for="field_year">Year</label>
+            <input type="number" class="form-control" name="year" id="field_year"
+                    ng-model="vm.personalAutoVehicle.year"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.make" for="field_make">Make</label>
+            <input type="text" class="form-control" name="make" id="field_make"
+                    ng-model="vm.personalAutoVehicle.make"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.model" for="field_model">Model</label>
+            <input type="text" class="form-control" name="model" id="field_model"
+                    ng-model="vm.personalAutoVehicle.model"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.bodyStyle" for="field_bodyStyle">Body Style</label>
+            <input type="text" class="form-control" name="bodyStyle" id="field_bodyStyle"
+                    ng-model="vm.personalAutoVehicle.bodyStyle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.personalAutoVehicle.symbols" for="field_symbols">Symbols</label>
+            <input type="text" class="form-control" name="symbols" id="field_symbols"
+                    ng-model="vm.personalAutoVehicle.symbols"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="alotApp.personalAutoVehicle.policyDriver" for="field_policyDriver">Policy Driver</label>
+            <select class="form-control" id="field_policyDriver" name="policyDriver" ng-model="vm.personalAutoVehicle.policyDriver" ng-options="policyDriver as policyDriver.id for policyDriver in vm.policydrivers track by policyDriver.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="alotApp.personalAutoVehicle.productLine" for="field_productLine">Product Line</label>
+            <select class="form-control" id="field_productLine" name="productLine" ng-model="vm.personalAutoVehicle.productLine" ng-options="productLine as productLine.id for productLine in vm.productlines track by productLine.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="alotApp.personalAutoVehicle.garageLocation" for="field_garageLocation">Garage Location</label>
+            <select class="form-control" id="field_garageLocation" name="garageLocation" ng-model="vm.personalAutoVehicle.garageLocation" ng-options="address as address.id for address in vm.garagelocations | orderBy:'id' track by address.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

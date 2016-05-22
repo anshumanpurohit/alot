@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNamedInsuredLabel" translate="alotApp.namedInsured.home.createOrEditLabel">Create or edit a Named Insured</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.namedInsured.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.namedInsured.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.namedInsured.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.namedInsured.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.namedInsured.deleted" for="field_deleted">Deleted</label>
+            <input type="checkbox" class="form-control" name="deleted" id="field_deleted"
+                    ng-model="vm.namedInsured.deleted"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="alotApp.namedInsured.policyContact" for="field_policyContact">Policy Contact</label>
+            <select class="form-control" id="field_policyContact" name="policyContact" ng-model="vm.namedInsured.policyContact" ng-options="policyContact as policyContact.id for policyContact in vm.policycontacts | orderBy:'id' track by policyContact.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="alotApp.namedInsured.productLine" for="field_productLine">Product Line</label>
+            <select class="form-control" id="field_productLine" name="productLine" ng-model="vm.namedInsured.productLine" ng-options="productLine as productLine.id for productLine in vm.productlines track by productLine.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

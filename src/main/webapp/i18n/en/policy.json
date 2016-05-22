@@ -1,0 +1,25 @@
+{
+    "alotApp": {
+        "policy" : {
+            "home": {
+                "title": "Policies",
+                "createLabel": "Create a new Policy",
+                "createOrEditLabel": "Create or edit a Policy",
+                "search": "Search for Policy"
+            },
+            "created": "A new Policy is created with identifier {{ param }}",
+            "updated": "A Policy is updated with identifier {{ param }}",
+            "deleted": "A Policy is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Policy {{ id }}?"
+            },
+            "detail": {
+                "title": "Policy"
+            },
+            "policyNumber": "Policy Number",
+            "baseState": "Base State",
+            "productLine": "Product Line",
+            "jobs": "Jobs"
+        }
+    }
+}

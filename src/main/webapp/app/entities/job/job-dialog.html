@@ -1,0 +1,55 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myJobLabel" translate="alotApp.job.home.createOrEditLabel">Create or edit a Job</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.job.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.job.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.job.fixedId" for="field_fixedId">Fixed Id</label>
+            <input type="text" class="form-control" name="fixedId" id="field_fixedId"
+                    ng-model="vm.job.fixedId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.job.deleted" for="field_deleted">Deleted</label>
+            <input type="checkbox" class="form-control" name="deleted" id="field_deleted"
+                    ng-model="vm.job.deleted"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="alotApp.job.jobType" for="field_jobType">Job Type</label>
+            <select class="form-control" name="jobType" ng-model="vm.job.jobType" id="field_jobType">
+                <option value="QUOTE" translate="alotApp.JobType.QUOTE">QUOTE</option>
+                <option value="APPLICATION" translate="alotApp.JobType.APPLICATION">APPLICATION</option>
+                <option value="POLICYCHANGE" translate="alotApp.JobType.POLICYCHANGE">POLICYCHANGE</option>
+                <option value="CANCELLATION" translate="alotApp.JobType.CANCELLATION">CANCELLATION</option>
+                <option value="REWRITE" translate="alotApp.JobType.REWRITE">REWRITE</option>
+                <option value="REINSTATEMENT" translate="alotApp.JobType.REINSTATEMENT">REINSTATEMENT</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="alotApp.job.policy" for="field_policy">Policy</label>
+            <select class="form-control" id="field_policy" name="policy" ng-model="vm.job.policy" ng-options="policy as policy.id for policy in vm.policies track by policy.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

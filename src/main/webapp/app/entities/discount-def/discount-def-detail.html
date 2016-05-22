@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="alotApp.discountDef.detail.title">Discount Def</span> {{vm.discountDef.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="alotApp.discountDef.description">Description</span></dt>
+        <dd>
+            <span>{{vm.discountDef.description}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.discountDef.beginEffectiveDate">Begin Effective Date</span></dt>
+        <dd>
+            <span>{{vm.discountDef.beginEffectiveDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.discountDef.endEffectiveDate">End Effective Date</span></dt>
+        <dd>
+            <span>{{vm.discountDef.endEffectiveDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="alotApp.discountDef.state">State</span></dt>
+        <dd>
+            <span>{{vm.discountDef.state}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

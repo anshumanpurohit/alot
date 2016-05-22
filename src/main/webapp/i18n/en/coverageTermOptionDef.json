@@ -1,0 +1,26 @@
+{
+    "alotApp": {
+        "coverageTermOptionDef" : {
+            "home": {
+                "title": "Coverage Term Option Defs",
+                "createLabel": "Create a new Coverage Term Option Def",
+                "createOrEditLabel": "Create or edit a Coverage Term Option Def",
+                "search": "Search for Coverage Term Option Def"
+            },
+            "created": "A new Coverage Term Option Def is created with identifier {{ param }}",
+            "updated": "A Coverage Term Option Def is updated with identifier {{ param }}",
+            "deleted": "A Coverage Term Option Def is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Coverage Term Option Def {{ id }}?"
+            },
+            "detail": {
+                "title": "Coverage Term Option Def"
+            },
+            "description": "Description",
+            "beginEffectiveDate": "Begin Effective Date",
+            "endEffectiveDate": "End Effective Date",
+            "state": "State",
+            "coverageTermDef": "Coverage Term Def"
+        }
+    }
+}

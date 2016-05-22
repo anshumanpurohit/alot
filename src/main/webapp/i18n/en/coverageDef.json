@@ -1,0 +1,26 @@
+{
+    "alotApp": {
+        "coverageDef" : {
+            "home": {
+                "title": "Coverage Defs",
+                "createLabel": "Create a new Coverage Def",
+                "createOrEditLabel": "Create or edit a Coverage Def",
+                "search": "Search for Coverage Def"
+            },
+            "created": "A new Coverage Def is created with identifier {{ param }}",
+            "updated": "A Coverage Def is updated with identifier {{ param }}",
+            "deleted": "A Coverage Def is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Coverage Def {{ id }}?"
+            },
+            "detail": {
+                "title": "Coverage Def"
+            },
+            "description": "Description",
+            "beginEffectiveDate": "Begin Effective Date",
+            "endEffectiveDate": "End Effective Date",
+            "state": "State",
+            "coverageTermDef": "Coverage Term Def"
+        }
+    }
+}

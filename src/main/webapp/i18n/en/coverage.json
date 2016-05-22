@@ -1,0 +1,26 @@
+{
+    "alotApp": {
+        "coverage" : {
+            "home": {
+                "title": "Coverages",
+                "createLabel": "Create a new Coverage",
+                "createOrEditLabel": "Create or edit a Coverage",
+                "search": "Search for Coverage"
+            },
+            "created": "A new Coverage is created with identifier {{ param }}",
+            "updated": "A Coverage is updated with identifier {{ param }}",
+            "deleted": "A Coverage is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Coverage {{ id }}?"
+            },
+            "detail": {
+                "title": "Coverage"
+            },
+            "fixedId": "Fixed Id",
+            "productLine": "Product Line",
+            "definition": "Definition",
+            "terms": "Terms",
+            "personalAutoVehicle": "Personal Auto Vehicle"
+        }
+    }
+}

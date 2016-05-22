@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "productLine",
+      "otherEntityName": "productLine",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-one",
+      "relationshipName": "definition",
+      "otherEntityName": "discountDef",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "discount"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160521235222",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "discount"
+}

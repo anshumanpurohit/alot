@@ -1,0 +1,41 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "leads",
+      "otherEntityName": "lead",
+      "otherEntityRelationshipName": "job"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "policy",
+      "otherEntityName": "policy",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "jobType",
+      "fieldType": "JobType",
+      "fieldValues": "QUOTE,APPLICATION,POLICYCHANGE,CANCELLATION,REWRITE,REINSTATEMENT"
+    }
+  ],
+  "changelogDate": "20160521235213",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "job"
+}
