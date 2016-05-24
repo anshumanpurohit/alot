@@ -1,4 +1,4 @@
-# alot
+# alot https://codeship.com/projects/6bb52250-040c-0134-8a79-06dd406ffa5b/status?branch=master
 
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
